@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pseudo Classes CSS3</title>
+        <style>
+            
+            @-webkit-keyframes aumentar {
+                from {width: 100px; -webkit-transform: rotate(0deg)}
+                to {width: 150px; -webkit-transform: rotate(30deg)}
+            }
+            
+            @-webkit-keyframes diminuir {
+                from {width: 150px; -webkit-transform: rotate(30deg)}
+                to {width: 100px; -webkit-transform: rotate(0deg)}
+            }
+            
+            @-webkit-keyframes rodar {
+                0% {-webkit-transform: rotate(0deg);}
+                35% {-webkit-transform: rotate(-2deg);}
+                65% {-webkit-transform: rotate(2deg);}
+                100% {-webkit-transform: rotate(0deg);}
+            }
+            
+            @-webkit-keyframes float {
+                0% {-webkit-transform: translateY(-100px) rotateX(0deg);}
+                100% {-webkit-transform: translateY(100px) rotateX(45deg);}
+            }
+            
+            div.square {
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+            
+            div.square:hover {
+                -webkit-animation-name: rodar;
+                -webkit-animation-duration: 0.5s;
+                -webkit-animation-timing-function: linear;
+            }
+            
+            div.square img {
+                -webkit-transition: all .1s linear;
+            }
+            
+            div.square img:active {
+                -webkit-transform: rotate(45deg);
+            }
+            
+            div.circle {
+                margin: 30px auto;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
+                
+                -webkit-animation-name: float;
+                -webkit-animation-timing-function: cubic-bezier(2, 4, 8, 16);
+                -webkit-animation-duration: 0.7s;
+                -webkit-animation-iteration-count: infinite;
+                -webkit-animation-direction: alternate;
+                
+            }
+            
+            button {
+                border: 0;
+                background: #0087cc;
+                border-radius: 4px;
+                color: #fff;
+                cursor: pointer;
+                font: inherit;
+                margin: 0;
+                outline: 0;
+                padding: 12px 20px;
+                
+                -webkit-box-shadow: 0 5px 0 #006599;
+                   -moz-box-shadow: 0 5px 0 #006599;
+                
+                -webkit-transition: all .1s linear;
+                   -moz-transition: all .1s linear;
+                        transition: all .1s linear;
+            }
+            button:active {
+                box-shadow: 0 2px 0 #006599;
+                -webkit-transform: translateY(3px);
+            }
+            
+            .blue {background-color: rgba(50, 50, 150, 0.9);}
+            .red {background-color: rgba(150, 50, 50, 0.9);}
+            .green {background-color: rgba(50, 150, 50, 0.9);}
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="square blue"><img class="" src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-48.png"/></div>
+        <div class="square red"></div>
+        <div class="square green"></div>
+        
+        <div class="circle green"></div>
+        <button>Button</button>
+        <a href="http://www.roblaplaca.com/examples/bezierBuilder/">cubic-bezier builder</a>
+        
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS3 - 3D Animation</title>
+        <style>
+            .stage {
+                position: absolute;
+                top: 30%;
+                left: 42%;
+            }
+            
+            .example {
+                -webkit-perspective: 1000px;
+            }
+            
+            .face {
+                height: 150px;
+                width: 150px;
+                background: rgba(50, 50, 150, 0.5);
+            }
+            
+            .right {
+                -webkit-transform: rotate3d(1, 0, 0, 45deg);
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="stage">
+            <div class="example">
+                <div class="right face"></div>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CSS3 - Transformações 2D</title>
+        <style>
+            .group:before,
+            .group:after {
+                content: "";
+                display: table;
+            }
+            .group:after {
+                clear: both;
+            }
+            .group {
+                *zoom: 1;
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+            }
+            
+            figure {
+                width: 150px;
+                height: 150px;
+                float: left;
+                margin-left: 180px;
+                
+                -webkit-transition: all 1s linear;
+                line-height: 150px;
+                text-align: center;
+            }
+            
+            figure:nth-child(2) {background: #bFb;}
+            figure:nth-child(1) {background: #Fbb;}
+            figure:nth-child(3) {background: #bbF;}
+            
+            #rotate {
+                -webkit-transform: rotate(20deg);
+            }
+            
+            #translateX {
+                -webkit-transform: translateX(20px);
+            }
+            #translateY {
+                -webkit-transform: translateY(20px);
+            }
+            #translate {
+                -webkit-transform: translate(-20px, -20px);
+            }
+            
+            #scaleX {
+                -webkit-transform: scaleX(1);
+            }
+            #scaleY {
+                -webkit-transform: scaleY(0.5);
+            }
+            #scale {
+                -webkit-transform: scale(0.5, 1.2);
+            }
+            
+            #skewX {
+                -webkit-transform: skewX(20deg);
+            }
+            #skewY {
+                -webkit-transform: skewY(10deg);
+            }
+            #skew {
+                -webkit-transform: skew(10deg, 10deg);
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            <div class="group">
+                <figure id="rotate">rotate</figure>
+            </div>
+            
+            <div class="group">
+                <figure id="translateX">translateX</figure>
+                <figure id="translateY">translateY</figure>
+                <figure id="translate">translate</figure>
+            </div>
+            
+            <div class="group">
+                <figure id="scaleX">scaleX</figure>
+                <figure id="scaleY">scaleY</figure>
+                <figure id="scale">scale</figure>
+            </div>
+            
+            <div class="group">
+                <figure id="skewX">skewX</figure>
+                <figure id="skewY">skewY</figure>
+                <figure id="skew">skew</figure>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
